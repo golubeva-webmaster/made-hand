@@ -1,0 +1,4 @@
+bitrix/modules/main/classes/general/site_checker.php - заменен почтовый ящик Битрикс на который уходят письма при проверке сайта, на всякий случай.
+Лимит доп. сайтов увеличен до 100. COption::SetOptionString("main", "PARAM_MAX_SITES", "100");
+Отключена статистика и сбор информации для BigData.
+В файле /bitrix/modules/main/include.php убран заголовок X-Powered-CMS: Bitrix Site Manager
