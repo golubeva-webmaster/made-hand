@@ -12,12 +12,12 @@ $arUrlRewrite = array(
 		"ID" => "bitrix:sale.personal.order",
 		"PATH" => "/personal/order/index.php",
 	),
-	array(
-		"CONDITION" => "#^/collection/#",
-		"RULE" => "",
-		"ID" => "bitrix:news",
-		"PATH" => "/collection/index.php",
-	),
+//	array(
+//		"CONDITION" => "#^/collection/#",
+//		"RULE" => "",
+//		"ID" => "bitrix:news",
+//		"PATH" => "/collection/index.php",
+//	),
 	array(
 		"CONDITION" => "#^/services/#",
 		"RULE" => "",

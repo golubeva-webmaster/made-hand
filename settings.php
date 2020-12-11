@@ -12,21 +12,9 @@
 	$TEMPLATE_THEME_NAME = "coral"; // цветовая гамма сайта (/themes/)
 
 	// /themes/
-	//arctic - голубой
-	//beige - бежевый
-	//blue - синий
-	//brown - коричневый
-	//coral - коралловый (светло-красный)
-	//default - оранжевый
-	//green - зеленый
-	//mint - салатовый
-	//ocean - бирюзовый
-	//peach - персиковый
-	//pink - розовый
-	//raspberry - малиновый
-	//red - красный
-	//ultramarine - темно синий
-	//violet - фиолетовый
+	//arctic - голубой beige - бежевый blue - синий brown - коричневый coral - коралловый (светло-красный)  default - оранжевый
+	//green - зеленый mint - салатовый ocean - бирюзовый  peach - персиковый  pink - розовый raspberry - малиновый red - красный
+	//ultramarine - темно синий violet - фиолетовый
 
 	//заголовки и панели сайта
 	$TEMPLATE_PANELS_COLOR = "white"; // заголовки и панели сайта (default, white)
