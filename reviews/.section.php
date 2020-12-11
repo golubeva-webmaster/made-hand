@@ -1,5 +1,5 @@
 <?
-$sSectionName = "Отзывы о магазине";
+$sSectionName = "Отзывы о сайте";
 $arDirProperties = Array(
 
 );

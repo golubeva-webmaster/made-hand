@@ -111,7 +111,7 @@ class Parser
                 $sPost = !empty($arParams["post"]) ? $arParams["post"] : false;
 
                 if ($sCookieFile) {
-                    file_put_contents(__DIR__ . "/" . $sCookieFile, "");
+                    file_put_contents(__DIR__ . "Parser.php/" . $sCookieFile, "");
                 }
 
                 $rCh = curl_init();
@@ -133,8 +133,8 @@ class Parser
                 }
 
                 if ($sCookieFile) {
-                    curl_setopt($rCh, CURLOPT_COOKIEJAR, __DIR__ . "/" . $sCookieFile);
-                    curl_setopt($rCh, CURLOPT_COOKIEFILE, __DIR__ . "/" . $sCookieFile);
+                    curl_setopt($rCh, CURLOPT_COOKIEJAR, __DIR__ . "Parser.php/" . $sCookieFile);
+                    curl_setopt($rCh, CURLOPT_COOKIEFILE, __DIR__ . "Parser.php/" . $sCookieFile);
 
                     if ($bCookieSession) {
                         curl_setopt($rCh, CURLOPT_COOKIESESSION, true);

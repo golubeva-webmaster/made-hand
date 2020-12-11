@@ -1,7 +1,7 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Возможности");?>
 <h1 class="ff-medium"> Возможности </h1>
-
+<a href="https://dw24.su/lib/base/internet_magazin_deluxe/" target="_blank">База знаний</a>
 <div class="detail-text-wrap flex">
 	<div class="flex-item">
 		<div class="h1">Заголовок H1</div>
@@ -254,7 +254,7 @@ $APPLICATION->SetTitle("Возможности");?>
 
 
 <br/><br/><br/>
-<div class="h2 ff-bold">Цитата</div>
+<div class="h2 ff-bold">Цитаты</div>
 
 
 
@@ -264,7 +264,12 @@ $APPLICATION->SetTitle("Возможности");?>
 		<p>- Дмитрий Быков о Пелевине. "Путь вниз". Лекция первая</p>
 	</div>
 
+<br/><br/><br/>
+<div class="h2 ff-bold">Цитаты в новостях</div>
 
+    <div class="detail-text-wrap">
+        <blockquote><p>В агентстве отметили, что, в частности, в Краснодарском крае с 21 июня отменена обязательная обсервация для прибывающих в регион граждан и частично снят режим эпидемиологического контроля. Местные власти также сняли ограничения по передвижению внутри региона.</p></blockquote>
+    </div>
 
 
 <br/><br/><br/>

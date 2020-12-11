@@ -1,5 +1,5 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Отзывы о магазине");?><h1>Отзывы о магазине</h1>
+$APPLICATION->SetTitle("Отзывы");?><h1>Отзывы</h1>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:menu",
 	"personal",
@@ -20,7 +20,7 @@ $APPLICATION->SetTitle("Отзывы о магазине");?><h1>Отзывы о
 <div class="global-block-container">
 	<div class="global-content-block">
 		<?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
+	"bitrix:news.list",
 	"reviews", 
 	array(
 		"COMPONENT_TEMPLATE" => "reviews",
@@ -106,7 +106,7 @@ $APPLICATION->SetTitle("Отзывы о магазине");?><h1>Отзывы о
 		"PAGER_TEMPLATE" => "round",
 		"DISPLAY_TOP_PAGER" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"PAGER_TITLE" => "Отзывы о магазине",
+		"PAGER_TITLE" => "Отзывы о сайте",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
