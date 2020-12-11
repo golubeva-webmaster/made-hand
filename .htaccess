@@ -7,7 +7,7 @@ ErrorDocument 404 /404.php
 
 	#php_value display_errors 1
 
-	#php_value mbstring.internal_encoding UTF-8
+	php_value mbstring.internal_encoding UTF-8
 </IfModule>
 
 <IfModule mod_rewrite.c>
@@ -30,3 +30,10 @@ ErrorDocument 404 /404.php
 	ExpiresByType image/jpeg "access plus 3 day"
 	ExpiresByType image/gif "access plus 3 day"
 </IfModule>
+
+php_value mbstring.func_overload 2
+php_value mbstring.internal_encoding UTF-8
+
+RewriteCond %{SERVER_PORT} ^80$ [OR]
+RewriteCond %{HTTP} =on
+RewriteRule ^(.*)$ https://www.made-hand.ru/$1 [R=301,L]

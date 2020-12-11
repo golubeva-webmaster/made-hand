@@ -1,2 +1,53 @@
-User-agent: *
-Disallow: /
+User-Agent: *
+Disallow: /*openstat*
+Disallow: /*admin*
+Disallow: /bitrix/
+Disallow: /*bitrix*
+Disallow: /reviews/
+Disallow: /*gclid*
+Disallow: /*yclid*
+Disallow: /*ymclid*
+Disallow: /*.swf
+Disallow: /search*
+Disallow: /basket*
+Disallow: /order*
+Disallow: /personal*
+Disallow: /services*
+Disallow: /print
+Disallow: /compare
+Disallow: /vozmozhnosti
+Disallow: /slider/
+Disallow: /wiki/*
+Disallow: /auth*
+Disallow: /form/*
+Disallow: /test*
+Disallow: /404.php
+Disallow: /cgi-bin
+Disallow: /local/*
+Disallow: *captcha
+Disallow: */feed
+Disallow: */rss
+Disallow: /info/more/*
+Disallow: /timeman/*
+Disallow: /api/*
+
+Sitemap: https://www.made-hand.ru/sitemap.xml
+Host: https://www.made-hand.ru/
+
+Disallow: /*?*
+
+Allow: */upload/
+Allow: /bitrix/*.js
+Allow: /bitrix/*.css
+Allow: /local/*.js
+Allow: /local/*.css
+Allow: /local/*.jpg
+Allow: /local/*.jpeg
+Allow: /local/*.png
+Allow: /local/*.gif
+
+User-Agent: Googlebot
+Disallow: /*admin
+Disallow: /*bitrix
+Allow: /bitrix/*css
+Allow: /bitrix/*js

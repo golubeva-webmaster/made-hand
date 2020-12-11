@@ -3,4 +3,4 @@
 <?else:?>
 	<a href="<?=SITE_DIR?>" class="logo"><img src="<?=SITE_TEMPLATE_PATH?>/images/logo.png"></a>
 <?endif;?>
-<p>Copyright 2005-2014 © dresscode.ru <br /> модный интернет-магазин одежды, <br /> обуви и аксессуаров. Все права защищены</p>
+<p>Copyright 2005-2014 © dresscode.ru <br /> модный интернет-сайт одежды, <br /> обуви и аксессуаров. Все права защищены</p>

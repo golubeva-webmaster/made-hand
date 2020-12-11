@@ -4,7 +4,7 @@
 	array(
 		"COMPONENT_TEMPLATE" => "version2",
 		"IBLOCK_TYPE" => "catalog",
-		"IBLOCK_ID" => "24",
+		"IBLOCK_ID" => "48",
 		"CACHE_TYPE" => "A",
 		"CACHE_TIME" => "3600000",
 		"PRICE_CODE" => array(
