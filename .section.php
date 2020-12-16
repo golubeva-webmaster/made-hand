@@ -2,7 +2,7 @@
 $sSectionName = "Главная страница";
 $arDirProperties = array(
    "description" => "",
-   "keywords" => "Достопримечательности, Достопримечательности России",
+   "keywords" => "Вязание спицами, вязание крючком, схемы вязания, описания вязания",
    "robots" => "index, follow"
 );
 ?>

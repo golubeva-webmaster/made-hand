@@ -342,7 +342,7 @@
 			if(!empty($_GET["product_id"])){
 				$APPLICATION->IncludeComponent(
 					"dresscode:catalog.item",
-					"fast",
+					"mari_fast",
 					array(
 						"COMPONENT_TEMPLATE" => ".default",
 						"CACHE_TIME" => "36000000",

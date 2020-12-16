@@ -1,6 +1,8 @@
 <?define("INDEX_PAGE", "Y");?>
 <?define("MAIN_PAGE", true);?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
+<?$APPLICATION->SetTitle('Вязание крючком и спицами');?>
+<?//$APPLICATION->SetDescription('Схемы вязания спицами и крючком.');?>
 	<div id="promoBlock">
 		<?$APPLICATION->IncludeComponent(
 	"dresscode:slider", 
@@ -15,6 +17,7 @@
 	),
 	false
 );?>
+        <h1><?$APPLICATION->ShowTitle();?></h1>
 
 			<?$APPLICATION->IncludeComponent(
 	"dresscode:special.product", 
