@@ -20,16 +20,16 @@
 			"CODE" => "NAME", // Код поля для сортировки
 			"NAME" => GetMessage("CATALOG_SORT_FIELD_NAME") // имя для вывода в публичной части, редактировать в (/lang/ru/section.php)
 		),
-		"PRICE_ASC"=> array(
-			"ORDER"=> "ASC",
-			"CODE" => "PROPERTY_MINIMUM_PRICE",  // изменен для сортировки по ТП
-			"NAME" => GetMessage("CATALOG_SORT_FIELD_PRICE_ASC")
-		),
-		"PRICE_DESC" => array(
-			"ORDER"=> "DESC",
-			"CODE" => "PROPERTY_MAXIMUM_PRICE", // изменен для сортировки по ТП
-			"NAME" => GetMessage("CATALOG_SORT_FIELD_PRICE_DESC")
-		)
+//		"PRICE_ASC"=> array(
+//			"ORDER"=> "ASC",
+//			"CODE" => "PROPERTY_MINIMUM_PRICE",  // изменен для сортировки по ТП
+//			"NAME" => GetMessage("CATALOG_SORT_FIELD_PRICE_ASC")
+//		),
+//		"PRICE_DESC" => array(
+//			"ORDER"=> "DESC",
+//			"CODE" => "PROPERTY_MAXIMUM_PRICE", // изменен для сортировки по ТП
+//			"NAME" => GetMessage("CATALOG_SORT_FIELD_PRICE_DESC")
+//		)
 	);
 
   	//get section ID for smart filter
@@ -132,16 +132,16 @@
 	}
 
 	if($arResult["PRICE_SORT_FROM_PROPERTY"] == "N"){
-		$arSortFields["PRICE_ASC"] = array(
-			"ORDER"=> "ASC",
-			"CODE" => "CATALOG_PRICE_".$arResult["BASE_PRICE"]["ID"],
-			"NAME" => GetMessage("CATALOG_SORT_FIELD_PRICE_ASC")
-		);
-		$arSortFields["PRICE_DESC"] = array(
-			"ORDER"=> "DESC",
-			"CODE" => "CATALOG_PRICE_".$arResult["BASE_PRICE"]["ID"],
-			"NAME" => GetMessage("CATALOG_SORT_FIELD_PRICE_DESC")
-		);
+//		$arSortFields["PRICE_ASC"] = array(
+//			"ORDER"=> "ASC",
+//			"CODE" => "CATALOG_PRICE_".$arResult["BASE_PRICE"]["ID"],
+//			"NAME" => GetMessage("CATALOG_SORT_FIELD_PRICE_ASC")
+//		);
+//		$arSortFields["PRICE_DESC"] = array(
+//			"ORDER"=> "DESC",
+//			"CODE" => "CATALOG_PRICE_".$arResult["BASE_PRICE"]["ID"],
+//			"NAME" => GetMessage("CATALOG_SORT_FIELD_PRICE_DESC")
+//		);
 	}
 
 ?>
@@ -241,9 +241,9 @@ $this->EndViewTarget();?>
 	"LINE" => array(
 		"CLASS" => "line"
 	),
-	"TABLE" => array(
-		"CLASS" => "table"
-	)	
+//	"TABLE" => array(
+//		"CLASS" => "table"
+//	)
 );?>
 
 <?if(!empty($_REQUEST["VIEW"]) && $arTemplates[$_REQUEST["VIEW"]]){

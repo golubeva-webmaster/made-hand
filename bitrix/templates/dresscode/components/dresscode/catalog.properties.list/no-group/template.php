@@ -17,6 +17,8 @@
                     <?if(gettype($arProperty["DISPLAY_VALUE"]) == "array"){
                         $arProperty["DISPLAY_VALUE"] = implode(" / ", $arProperty["DISPLAY_VALUE"]);
                     }?>
+                    <?//mari НЕ отображать Источник если он amigurum.ru...?>
+                    <?if((substr_count($arProperty["DISPLAY_VALUE"], 'amigurum.ru') < 1)):?>
                     <div class="propertyTable">
                         <div class="propertyName"><?=preg_replace("/\[.*\]/", "", $arProperty["NAME"])?></div>
                         <div class="propertyValue">
@@ -32,6 +34,7 @@
                             <?endif;?>
                         </div>
                     </div>
+                    <?endif;?>
                 <?endif;?>
             <?endforeach;?>
         </div>

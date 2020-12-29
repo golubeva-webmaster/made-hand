@@ -14,6 +14,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<meta charset="<?=SITE_CHARSET?>">
 		<META NAME="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/images/favicon.ico" />
+        <?/*<link rel="canonical" href="<?="https://www.made-hand.ru" . $_SERVER['REQUEST_URI']; ?>"/>*/?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="theme-color" content="#3498db">
 		<?CJSCore::Init(array("fx", "ajax", "window", "popup"));?>
@@ -32,8 +33,13 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/colorSwitcher.js");?>
 		<?$APPLICATION->ShowHead();?>
 		<title><?$APPLICATION->ShowTitle();?></title>
+        <meta name="yandex-verification" content="20e78e0478ac11f8" />
+        <meta name="google-site-verification" content="LUCHxrdOJ-_K1DB1ElUXLHFvGRoh657_aPYD38jMqMk" />
 	</head>
-	<body class="loading <?if (INDEX_PAGE == "Y"):?>index<?endif;?><?if(!empty($TEMPLATE_PANELS_COLOR) && $TEMPLATE_PANELS_COLOR != "default"):?> panels_<?=$TEMPLATE_PANELS_COLOR?><?endif;?>">
+	<body
+            class="loading <?if (INDEX_PAGE == "Y"):?>index<?endif;?><?if(!empty($TEMPLATE_PANELS_COLOR) && $TEMPLATE_PANELS_COLOR != "default"):?> panels_<?=$TEMPLATE_PANELS_COLOR?><?endif;?>"
+            itemscope="itemscope" itemtype="http://schema.org/WebPage"
+    >
 		<div id="panel">
 			<?$APPLICATION->ShowPanel();?>
 		</div>

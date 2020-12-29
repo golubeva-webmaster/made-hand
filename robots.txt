@@ -1,7 +1,7 @@
 User-Agent: *
+Disallow: /*?*
 Disallow: /*openstat*
 Disallow: /*admin*
-Disallow: /bitrix/
 Disallow: /*bitrix*
 Disallow: /reviews/
 Disallow: /*gclid*
@@ -31,20 +31,10 @@ Disallow: /info/more/*
 Disallow: /timeman/*
 Disallow: /api/*
 
+Allow: /upload/*
+
 Sitemap: https://www.made-hand.ru/sitemap.xml
-Host: https://www.made-hand.ru/
-
-Disallow: /*?*
-
-Allow: */upload/
-Allow: /bitrix/*.js
-Allow: /bitrix/*.css
-Allow: /local/*.js
-Allow: /local/*.css
-Allow: /local/*.jpg
-Allow: /local/*.jpeg
-Allow: /local/*.png
-Allow: /local/*.gif
+Host: https://www.made-hand.ru
 
 User-Agent: Googlebot
 Disallow: /*admin

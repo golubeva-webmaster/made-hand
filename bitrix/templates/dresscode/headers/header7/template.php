@@ -35,7 +35,7 @@
 						);?>
 					</ul>
 				</div>
-				<div id="geoPosition"<?if(!empty($TEMPLATE_SUBHEADER_COLOR)):?> class="color_<?=$TEMPLATE_SUBHEADER_COLOR?>"<?endif;?>>
+				<?/*<div id="geoPosition"<?if(!empty($TEMPLATE_SUBHEADER_COLOR)):?> class="color_<?=$TEMPLATE_SUBHEADER_COLOR?>"<?endif;?>>
 					<ul>
 						<?$APPLICATION->IncludeComponent("dresscode:sale.geo.positiion", "", array(),
 							false,
@@ -44,7 +44,7 @@
 							)
 						);?>
 					</ul>
-				</div>
+				</div>*/?>
 				<div id="topSocial">
 					<?$APPLICATION->IncludeComponent(
 						"bitrix:main.include",
@@ -99,14 +99,15 @@
 					</div>
 				</div>
 				<div class="subTableColumn">
+                    <?/*<a href="/catalog/" class="heading orange menuRolled header_btn" id="catalogMenuHeading">Добавить работу<ins></ins></a>*/?>
 					<div class="phonesContainer">
 						<div class="firstPhones">
 							<div class="phonesTb">
 								<div class="phonesTc">
-									<a href="<?=SITE_DIR?>callback/" class="callBackIcon"></a>
+									<?/*<a href="<?=SITE_DIR?>callback/" class="callBackIcon"></a>*/?>
 								</div>
 								<div class="phonesTc">
-									<?$APPLICATION->IncludeComponent(
+									<?/*$APPLICATION->IncludeComponent(
 										"bitrix:main.include",
 										".default",
 										array(
@@ -116,11 +117,13 @@
 											"EDIT_TEMPLATE" => ""
 										),
 										false
-									);?>
+									);*/?>
+
+
 								</div>
 							</div>
 						</div>
-						<div class="secondPhones">
+						<?/*<div class="secondPhones">
 							<div class="phonesTb">
 								<div class="phonesTc">
 									<a href="<?=SITE_DIR?>callback/" class="scheduleIcon"></a>
@@ -137,21 +140,24 @@
 										),
 										false
 									);?>
+
 								</div>
 							</div>
-						</div>
+						</div>*/?>
+
 					</div>
 				</div>
 				<div class="subTableColumn">
 					<div class="toolsContainer">
-						<div class="topCompare">
+                        <div class="topWishlist">
+                            <div id="flushTopwishlist">
+                                <?$APPLICATION->IncludeComponent("dresscode:favorite.line", "version4", Array(), false);?>
+                            </div>
+                        </div>
+
+                        <?/*<div class="topCompare">
 							<div id="flushTopCompare">
 								<?$APPLICATION->IncludeComponent("dresscode:compare.line", "version4", Array(),	false);?>
-							</div>
-						</div>
-						<div class="topWishlist">
-							<div id="flushTopwishlist">
-								<?$APPLICATION->IncludeComponent("dresscode:favorite.line", "version4", Array(), false);?>
 							</div>
 						</div>
 						<div class="cart">
@@ -184,7 +190,7 @@
 									false
 								);?>
 							</div>
-						</div>
+						</div>*/?>
 					</div>
 				</div>
 			</div>

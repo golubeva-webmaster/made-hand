@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="92c6b8d2-39ad-4152-b38e-4ca5e835507d" name="Travel" url="http://marigolu18.beget.tech ">
-        <fileTransfer accessType="FTPS" host="marigolu18.beget.tech " port="21">
+      <webServer id="92c6b8d2-39ad-4152-b38e-4ca5e835507d" name="Travel" url="http://marigolu18.beget.tech/">
+        <fileTransfer rootFolder="/marigolu18.beget.tech/public_html/" host="maru.beget.com" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

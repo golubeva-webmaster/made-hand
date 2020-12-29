@@ -1,4 +1,5 @@
 <?php
+
 // Туризм
 $GLOBALS['WORDS_NEWS_STOP'] = ['авари', 'трагеди', 'крушени', 'болезн', 'катастроф','гибел']; // стоп-слова для Туристических новостей
 $GLOBALS['REGIONS_IBLOCK_ID'] = 24;
@@ -21,7 +22,7 @@ $GLOBALS['WORDS_SEASON'] = [
 $GLOBALS['WORDS_UZOR'] = [
     '167' => ['мотив', 'матив'],
     '168' => ['аранами','араны', 'косами',' коса '],
-    '169' => ['жаккард','жакард','жокард','жоккард'],
+    '169' => ['жаккард','жакард','жокард','жоккард','норвежск'],
     '170' => ['ажур'],
     '171' => ['филейн'],
     '212' => ['бабоч'],
@@ -32,10 +33,10 @@ $GLOBALS['WORDS_UZOR'] = [
     '256' => ['миссони','мисони','зигзак'],
     '257' => ['сердеч','сердц'],
     '258' => ['тунис'],
-    '259' => ['рельеф','вафельн','жемчужн','соты','кольчуг','плетен'],
+    '259' => ['рельеф','вафельн','жемчужн','соты','кольчуг','плетен','фактурн'],
     '260' => ['интарси'],
     '261' => ['лист','веточк'],
-    '262' => ['шишеч','шишк','узелк'],
+    '262' => ['шишеч','шишк','узелк','нупп'],
     '263' => ['резинк'],
     '264' => ['бриош'],
 	'265' => ['фриформ'],
@@ -195,12 +196,14 @@ $GLOBALS['WORDS_TOY'] = [
 $GLOBALS['LEVEL'] = [
     '323' => ['прост', 'начинающ','нович'],
 ];
-$GLOBALS['WORDS_NAME_DEL'] = ['2006', '2007', '2008', '2009','2010', '2011', '2012', '2013','2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021','&','amp;','quot;'];
+$GLOBALS['WORDS_NAME_DEL'] = ['2006', '2007', '2008', '2009','2010', '2011', '2012', '2013','2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021','&','amp;','quot;','Вязание для женщин. '];
 $GLOBALS['WORDS_NAME_STOP'] = ['Подборка','подборк','дайджест','ВИДЕО:','итоги конкурса','прием работ','Зайка Лулу крючком','Пупс в костюме лисенка ']; // если в названии есть, не сохранять такой элемент
 $GLOBALS['WORDS_DETAIL_STOP'] = ['Читать дальше']; // если в описании есть, не сохранять такой элемент
 $GLOBALS['WORDS_DEL_FROM_DETAIL_TEXT'] = ['<noscript>','</noscript>','podborki','https://kru4ok.ru/images/lazy2.png',
     'Здесь должно загрузиться видео, подождите или обновите страницу.',
-    '<p></p>',
+    '<p></p>', '<p>&nbsp;</p>', '<p> </p>',
+    '<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->',
+    'https://money.yandex.ru/quickpay/shop-widget?writer=selle'
 
     ]; // если в описании есть, удалить
 
@@ -246,7 +249,7 @@ function mariMail($arrr)
                 }
             }
         else $text .= 'Переданное значение, не массив = '.$arrr;
-    mail('marishagolubeva@gmail.com', 'mariMail '.date('U'), $text);
+    mail('marishagolubeva@gmail.com', 'mariMail made-hand init'.date('U'), $text);
 }
 
 function getProperty($arWords, $element_name){
@@ -276,11 +279,19 @@ class Elements
 {
     function OnBeforeIBlockElementUpdateHandler(&$arFields){
         if($arFields['IBLOCK_ID'] == 48 ) {
-            // заполнить св-во "Что"
+            // --------------------- заполнить св-во "Что" ------------------------
             if ($arFields['PROPERTY_VALUES'][301][0] == '')
                 $arFields['PROPERTY_VALUES'][301] = getProperty($GLOBALS['WORDS_TOY'], $arFields['NAME']);
 
-            $arFields['PREVIEW_PICTURE'] = $arFields['DETAIL_PICTURE'];
+            //$arFields['PREVIEW_PICTURE'] = $arFields['DETAIL_PICTURE'];
+
+            // --------------------- ОПИСАНИЕ ДЛЯ АНОНСА ---------------------------
+
+            if($arFields['PREVIEW_TEXT'] == ''){
+                $arrP = explode('.',strip_tags($arFields['DETAIL_TEXT']));
+                $arFields['PREVIEW_TEXT'] = trim($arrP[0]);
+                $arFields['PREVIEW_TEXT'] = str_replace('<br>','', $arFields['PREVIEW_TEXT']);
+            }
         }
     }
 
@@ -291,6 +302,9 @@ class Elements
 
         if($arFields['IBLOCK_ID'] == 48 ) {
 
+            $arFields['CODE'] = $arFields['CODE'].'_'.rand(1,1000); // уникальность символьного кода
+
+            // ----------------- НАЗВАНИЕ -----------------------
 
 			// Деактивировать элементы с такими словами в названии
             foreach($GLOBALS['WORDS_NAME_STOP'] as $word) {
@@ -301,10 +315,6 @@ class Elements
                     return false;
 				}
             }
-            // Не сохранять элементы с такими словами в описании foreach($GLOBALS['WORDS_DETAIL_STOP'] as $word) if (stripos($arFields['DETAIL_TEXT'], $word))  return false;
-
-            $arFields['CODE'] = $arFields['CODE'].'_'.rand(1,1000); // уникальность символьного кода
-
 
             // Убрать из названия год
             foreach($GLOBALS['WORDS_NAME_DEL'] as $word)
@@ -313,6 +323,7 @@ class Elements
 
             $arFields['NAME'] = explode('          ', $arFields['NAME'])[0];
 
+            // Вытаскиваем св-ва из Названия
 
             // Если в названии присутствует "крючком" или "спицами", выставляем св-во Инструмент
             if($arFields['PROPERTY_VALUES'][286][0] == '')
@@ -345,23 +356,38 @@ class Elements
             $arFields['PROPERTY_VALUES']['SOURCE'] = explode('//',$arFields['LINK'])[1]; // вырежем http
 
 
-            $arFields['DETAIL_TEXT'] = str_replace($GLOBALS['WORDS_DEL_FROM_DETAIL_TEXT'] ,'',$arFields['DETAIL_TEXT']);
-
-            if(strpos($arFields['LINK'],'clubmasteric.ru') || strpos($arFields['LINK'],'kru4ok.ru') || strpos($arFields['LINK'],'knitka.ru')) {
-				// Вырежим из описания первую картинку для clubmasteric.ru, kru4ok.ru, knitka.ru
+            // --------------------- ОПИСАНИЕ ---------------------------
+            // Вырежим из описания первую картинку
+            if(strpos($arFields['LINK'],'clubmasteric.ru')
+                ||
+                strpos($arFields['LINK'],'kru4ok.ru')
+                ||
+                strpos($arFields['LINK'],'knitka.ru')
+                ||
+                strpos($arFields['LINK'],'uzorispicami.ru')
+            ) {
                 $arFields['DETAIL_TEXT']= stristr(stristr($arFields['DETAIL_TEXT'], '<img'),'>');
                 $arFields['DETAIL_TEXT']= substr($arFields['DETAIL_TEXT'], 1, strlen($arFields['DETAIL_TEXT']));
             }
+
             if(strpos($arFields['LINK'],'uzorispicami.ru')) {
-                $arFields['DETAIL_TEXT'] = explode('<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->', $arFields['DETAIL_TEXT'])[0];
+                $arFields['DETAIL_TEXT'] = str_replace('width="100%" height="222"','width="0" height="0"',$arFields['DETAIL_TEXT']);
+
+                $arr = explode('<!-- relpost-thumb-wrapper -->', $arFields['DETAIL_TEXT']);
+                $arFields['DETAIL_TEXT'] = $arr[0];
             }
-            if(strpos($arFields['LINK'],'kru4ok.ru')){
-                // Из названия вытащить автора
-                if (stripos($arFields['NAME'], 'Работа')){
-                    $tmp = explode('Работа ', $arFields['NAME']);
-                    $arFields['PROPERTY_VALUES']['AUTHOR'] = $tmp[1];
-                }
+
+            $arFields['DETAIL_TEXT'] = str_replace($GLOBALS['WORDS_DEL_FROM_DETAIL_TEXT'] ,'',$arFields['DETAIL_TEXT']);
+
+            // --------------------- ОПИСАНИЕ ДЛЯ АНОНСА ---------------------------
+
+            if($arFields['PREVIEW_TEXT'] == ''){
+                $arrP = explode('.',strip_tags($arFields['DETAIL_TEXT']));
+                $arFields['PREVIEW_TEXT'] = trim($arrP[0]);
+                $arFields['PREVIEW_TEXT'] = str_replace('<br>','', $arFields['PREVIEW_TEXT']);
             }
+
+            // Не сохранять элементы с такими словами в описании foreach($GLOBALS['WORDS_DETAIL_STOP'] as $word) if (stripos($arFields['DETAIL_TEXT'], $word))  return false;
 
 			if(strpos($arFields['LINK'],'www.youtube.com'))
 				return false; // не сохраняем, если Источник - ютуб ПРОВЕРИТЬ
@@ -413,14 +439,31 @@ echo 'Document root: '.$_SERVER['DOCUMENT_ROOT'].'<br>';
 /home/m/marigolu18/marigolu18.beget.tech/public_html
 
 Быстрый просмотр - дает почти пустое окно
-Дубляж при создании
-
-img.aligncenter[src]
-
-Картинку детальной делать анонс
-	Мишка Берта
-Куколка — кролик
-Вязаная лисичка Фенька
 */
+
+AddEventHandler("main",'OnFileSave','OnFileSaveHandler');
+function OnFileSaveHandler(&$arFile, $fileName, $module){
+/*$arFile
+name = Красивая коса для варежек, шапки, шарфа, схема узора.jpeg
+type = image/jpeg
+tmp_name = /home/m/marigolu18/marigolu18.beget.tech/public_html/upload/tmp/BXTEMP-2020-12-30/00/bxu/main/fb9746217d916c95afd4d370d9f8f428/file1609237475650/default
+size = 23648
+error = 0
+description =
+COPY_FILE = Y
+MODULE_ID = iblock
+old_file = 312998
+ORIGINAL_NAME = Красивая коса для варежек, шапки, шарфа, схема узора.jpeg
+*/
+    // Обрезать картнку на случайное кол-во пикселей
+    $size = getimagesize($arFile['tmp_name']); // размер получаем
+    $randX = rand(0,2);
+    $randY = rand(1,2);
+
+    //обрезает оригинал
+    $arNewFile = CIBlock::ResizePicture($arFile, array("WIDTH" => $size[0]-$randX, "HEIGHT" => $size[1]-$randY, "METHOD" => "resample"));
+    if(is_array($arNewFile))
+        $arFile = $arNewFile;
+}
 
 ?>

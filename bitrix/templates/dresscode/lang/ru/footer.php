@@ -1,6 +1,6 @@
 <?
 	$MESS["BASKET_ADDED"] = "В корзине";
-	$MESS["DRESS_CATALOG"] = "Каталог товаров";
+	$MESS["DRESS_CATALOG"] = "Рукоделия";
 	$MESS["ADD_COMPARE_ADDED"] = "Добавлено";
 	$MESS["WISHLIST_ADDED"] = "Добавлено";
 	$MESS["ADD_CART_LOADING"] = "Загрузка";

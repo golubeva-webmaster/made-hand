@@ -120,6 +120,7 @@
 			</div>
 			<div id="footerBottom">
 				<div class="creator">
+                    <?/*
 					<?if(!empty($TEMPLATE_FOOTER_VARIANT) && $TEMPLATE_FOOTER_VARIANT == "4"):?>
 						<a href="http://dw24.su/"><img src="<?=SITE_TEMPLATE_PATH?>/images/dwC.png" alt="Digital Web"></a>
 					<?elseif(!empty($TEMPLATE_FOOTER_VARIANT) && ($TEMPLATE_FOOTER_VARIANT == "5" || $TEMPLATE_FOOTER_VARIANT == "6" || $TEMPLATE_FOOTER_VARIANT == "7" || $TEMPLATE_FOOTER_VARIANT == "8")):?>
@@ -127,6 +128,7 @@
 					<?else:?>
 						<a href="http://dw24.su/"><img src="<?=SITE_TEMPLATE_PATH?>/images/dw.png" alt="Digital Web"></a>
 					<?endif;?>
+                    */?>
 				</div>
 				<div class="social">
 					<?$APPLICATION->IncludeComponent(
@@ -285,5 +287,21 @@
 			REMOVE_SUBSCRIBE_LABEL: "<?=GetMessage("REMOVE_SUBSCRIBE_LABEL")?>"
 		};
 	</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(69743683, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/69743683" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 </html>

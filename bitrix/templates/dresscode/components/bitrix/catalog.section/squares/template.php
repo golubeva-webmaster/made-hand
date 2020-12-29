@@ -38,7 +38,7 @@ $this->setFrameMode(true);?>
 						<img src="<?=(!empty($arElement["IMAGE"]["src"]) ? $arElement["IMAGE"]["src"] : SITE_TEMPLATE_PATH.'/images/empty.png')?>" alt="<?if(!empty($arElement["IPROPERTY_VALUES"]["ELEMENT_PREVIEW_PICTURE_FILE_ALT"])):?><?=$arElement["IPROPERTY_VALUES"]["ELEMENT_PREVIEW_PICTURE_FILE_ALT"]?><?else:?><?=$arElement["NAME"]?><?endif;?>" title="<?if(!empty($arElement["IPROPERTY_VALUES"]["ELEMENT_PREVIEW_PICTURE_FILE_TITLE"])):?><?=$arElement["IPROPERTY_VALUES"]["ELEMENT_PREVIEW_PICTURE_FILE_TITLE"]?><?else:?><?=$arElement["NAME"]?><?endif;?>">
 						<span class="getFastView" data-id="<?=$arElement["ID"]?>"><?=GetMessage("FAST_VIEW_PRODUCT_LABEL")?></span>
 					</a>
-					<a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="name"><span class="middle"><?=$arElement["NAME"]?></span></a>
+					<span class="middle"><?=$arElement["NAME"]?></span>
 					<?if(!empty($arElement["MIN_PRICE"])):?>
 						<?if($arElement["COUNT_PRICES"] > 1):?>
 							<a href="#" class="price getPricesWindow" data-id="<?=$arElement["ID"]?>">

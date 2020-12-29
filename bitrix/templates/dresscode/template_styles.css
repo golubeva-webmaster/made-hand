@@ -85,8 +85,8 @@ h2{
 
 h3{
 	font-family: "roboto_ltregular";
-	font-weight: 400;
-	font-size: 16px;
+	font-weight: 600;
+	font-size: 18px;
 }
 
 b,
@@ -3492,6 +3492,7 @@ line-height: 60px;
 
 .product.last{ /* next page */
 	line-height: 346px;
+	display: none; /*mari*/
 }
 
 .product .tabloid{
@@ -3856,7 +3857,7 @@ line-height: 60px;
 
 .product:hover .tabloid{
 	position: absolute;
-	height: auto;
+	/*height: auto;*/
 	width: 100%;
 	z-index: 3;
 }
@@ -10243,4 +10244,109 @@ div.bx-debug-summary{
     stroke-width: 20;
   }
 }
+/*================================================ mari ==================================================*/
+/* цитаты в тексте новости -------------------{ */
+.detail-text-wrap blockquote{
+	font-size: 18px;
+	line-height: 26px;
+	text-align: left;
+	font-weight: 700;
+	padding: 20px 0 20px 52px;
+	position: relative;
+	margin: 25px auto 45px;
+	display: inline-block;
+	width: 80%;
+}
 
+.detail-text-wrap blockquote::after {
+	background-image: url(images/blockquote.png);
+	left: 0;
+	top: -27px;
+	background-position: 0 100%;
+}
+.detail-text-wrap blockquote::after{
+	content: '';
+	position: absolute;
+	background-repeat: no-repeat;
+	-webkit-background-size: 35px 27px;
+	background-size: 35px 27px;
+	width: 50px;
+	height: 27px;
+}
+/* цитаты в тексте новости -------------------} */
+
+.article__cover-description{
+	margin: 1px 0 0 !important;
+	padding: 0 !important;
+	list-style: none;
+	font-size: 13px;
+	line-height: 1.6em;
+	color: #888;
+}
+.article__live-updates li, .article__text li {
+	margin-bottom: .6875em;
+}
+.article__cover-description li {
+	position: relative;
+	display: inline;
+	padding-left: 14px;
+	padding-right: 7px;
+}
+.article__cover-description li::before {
+	content: '/';
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.article__cover-description {
+	list-style: none;
+	font-size: 13px;
+	line-height: 1.6em;
+	color: #888;
+}
+.article__cover {
+	margin: 1.1em auto;
+	width: 90%;
+}
+.article__live-updates img, .article__text img {
+	max-width: 100%;
+}
+.article__cover-image {
+	width: 100%;
+	display: block;
+}
+.white{
+	color: #fff !important;
+}
+.logo-link{
+	text-decoration: none;
+}
+.logo{
+	color: #666;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	font-weight: 900;
+}
+.header_btn{
+	padding: 1rem 1.5rem;
+	color: white;
+	text-decoration: navajowhite;
+}
+.telephone, .email, .compare, .cart{
+	display:none;
+}
+#slider .sliderContent .smallText,
+#slider .sliderContent .smallTextColor,
+#slider .sliderContent .smallTextLight,
+
+#slider .sliderContent .mediumText,
+#slider .sliderContent .mediumTextColor,
+#slider .sliderContent .mediumTextLight,
+
+#slider .sliderContent .cButton
+{
+	font-weight: bold;
+}
+#newsContainer .item .description .middle{
+	line-height: 1rem;
+}

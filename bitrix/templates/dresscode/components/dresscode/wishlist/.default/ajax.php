@@ -46,7 +46,7 @@
 									<div style="margin-bottom:8px;font-weight:bold;font-family:\'Arial Bold\',Gadget,sans-serif;font-size:14px;line-height:18px;color:#000000;">Вы выбрали:</div>
 									#PRODUCT_LIST#
 									<div style="margin-top:18px;text-align:center;">
-										<a href="#SITE_URL#" style="display:inline-block;padding-top:12px;padding-right:18px;padding-bottom:14px;padding-left:18px;font-weight:normal;font-family:\'Arial\',sans-serif;font-size:14px;line-height:16px;background: #63c322;color:#fefefe;text-decoration:none;border-radius:2px;">Перейти на сайт магазина</a>
+										<a href="#SITE_URL#" style="display:inline-block;padding-top:12px;padding-right:18px;padding-bottom:14px;padding-left:18px;font-weight:normal;font-family:\'Arial\',sans-serif;font-size:14px;line-height:16px;background: #63c322;color:#fefefe;text-decoration:none;border-radius:2px;">Перейти на сайт сайта</a>
 									</div>
 								</div>
 								<div style="padding-top:24px;padding-right:24px;padding-bottom:30px;padding-left:24px;margin-top:12px;background-color:#ffffff;">
@@ -57,8 +57,8 @@
 													<a href="#SITE_URL#" target="_blank"><img src="#SITE_URL##SITE_TEMPLATE_PATH#/images/logo.png" style="max-width:100%;" alt=""></a>
 												</td>
 												<td style="width:50%;text-align:right;">
-													<div style="">С уважением, администрация магазина</div>
-													<a href="#SITE_URL#" style="display:inline-block;margin-top:8px;padding-top:12px;padding-right:18px;padding-bottom:14px;padding-left:18px;font-weight:normal;font-family:\'Arial\',sans-serif;font-size:14px;line-height:16px;background: #63c322;color:#fefefe;text-decoration:none;border-radius:2px;">Перейти на сайт магазина</a>
+													<div style="">С уважением, администрация сайта</div>
+													<a href="#SITE_URL#" style="display:inline-block;margin-top:8px;padding-top:12px;padding-right:18px;padding-bottom:14px;padding-left:18px;font-weight:normal;font-family:\'Arial\',sans-serif;font-size:14px;line-height:16px;background: #63c322;color:#fefefe;text-decoration:none;border-radius:2px;">Перейти на сайт сайта</a>
 												</td>
 											</tr>
 										</tbody>
@@ -67,11 +67,11 @@
 										<tbody>
 											<tr>
 												<td style="width:50%;padding-top:18px;padding-bottom:18px;text-align:center;border-right:5px solid #fff;text-align:center;background:#f3f3f3;">
-													<div style="margin-bottom:8px;font-weight:normal;font-family:\'Arial\',sans-serif;font-size:14px;line-height:18px;color:#000000;">Телефон магазина</div>
+													<div style="margin-bottom:8px;font-weight:normal;font-family:\'Arial\',sans-serif;font-size:14px;line-height:18px;color:#000000;">Телефон сайта</div>
 													<div style="font-weight:bold;font-family:\'Arial Bold\',Gadget,sans-serif;font-size:16px;line-height:18px;color:#000000;">8 (800) 000-00-00</div>
 												</td>
 												<td style="width:50%;padding-top:18px;padding-bottom:18px;text-align:center;border-left:5px solid #fff;text-align:center;background:#f3f3f3;">
-													<div style="margin-bottom:8px;font-weight:normal;font-family:\'Arial\',sans-serif;font-size:14px;line-height:18px;color:#000000;">Email магазина</div>
+													<div style="margin-bottom:8px;font-weight:normal;font-family:\'Arial\',sans-serif;font-size:14px;line-height:18px;color:#000000;">Email сайта</div>
 													<a href="mailto:#SALE_EMAIL#" traget="_blank" style="font-weight:bold;font-family:\'Arial Bold\',Gadget,sans-serif;font-size:16px;line-height:18px;color:#000000;text-decoration:none;border-bottom:1px solid #000000;">#SALE_EMAIL#</a>
 												</td>
 											</tr>

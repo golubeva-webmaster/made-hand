@@ -24,6 +24,8 @@
                                     <td class="right"></td>
                                 </tr>
                             <?endif;?>
+                            <?//mari НЕ отображать Источник если он amigurum.ru...?>
+                            <?if((substr_count($arProp["DISPLAY_VALUE"], 'amigurum.ru') < 1)):?>
                             <tr<?if($set % 2):?> class="gray"<?endif;?>>
                                 <td class="name"><span><?=preg_replace("/\[.*\]/", "", trim($PROP_NAME))?></span><?if(!empty($arProp["HINT"])):?><a href="#" class="question" title="<?=$arProp["HINT"]?>" data-description="<?=$arProp["HINT"]?>"></a><?endif;?></td>
                                 <td>
@@ -33,6 +35,7 @@
                                     <?if($arProp["FILTRABLE"] =="Y" && !is_array($arProp["VALUE"]) && !empty($arProp["VALUE_ENUM_ID"]) && !empty($arResult["LAST_SECTION"])):?><a href="<?=$arResult["LAST_SECTION"]["SECTION_PAGE_URL"]?>?arrFilter_<?=$arProp["ID"]?>_<?=abs(crc32($arProp["VALUE_ENUM_ID"]))?>=Y&amp;set_filter=Y" class="analog"><?=GetMessage("OTHERITEMS")?></a><?endif;?>
                                 </td>
                             </tr>
+                            <?endif?>
                         <?else:?>
                             <? $arSome[] = $arProp?> 
                         <?endif;?>
@@ -45,6 +48,8 @@
                     </tr>
                     <?foreach($arSome as $arProp):?>
                         <?$set++?>
+                        <?//mari НЕ отображать Источник если он amigurum.ru...?>
+                        <?if((substr_count($arProp["DISPLAY_VALUE"], 'amigurum.ru') < 1)):?>
                         <tr<?if($set % 2 ):?> class="gray"<?endif;?>>
                             <td class="name"><span><?=$arProp["NAME"]?></span><?if(!empty($arProp["HINT"])):?><a href="#" class="question" title="<?=$arProp["HINT"]?>" data-description="<?=$arProp["HINT"]?>"></a><?endif;?></td>
                             <td>
@@ -60,6 +65,7 @@
                                 <?endif;?>
                             </td>
                         </tr>
+                        <?endif;?>
                     <?endforeach;?>
                 <?endif;?>
             </tbody>

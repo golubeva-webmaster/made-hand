@@ -2,7 +2,7 @@
 <?error_reporting(0);?>
 <?if(!empty($_GET["act"])){
 	//include modules
-	if (CModule::IncludeModule("catalog") && CModule::IncludeModule("sale") && CModule::IncludeModule("dw.deluxe")){
+	if (CModule::IncludeModule("catalog") && CModule::IncludeModule("sale") /*&& CModule::IncludeModule("dw.deluxe")*/){
 		if($_GET["act"] == "getAvailableWindow"){
 			if(!empty($_GET["product_id"])){
 				$APPLICATION->IncludeComponent(

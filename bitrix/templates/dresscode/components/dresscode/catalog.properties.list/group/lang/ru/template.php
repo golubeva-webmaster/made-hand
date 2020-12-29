@@ -11,11 +11,11 @@
 	$MESS["CATALOG_ART_LABEL"] = "Артикул: ";
 	$MESS["CATALOG_PRICE_LABEL"] = "Цена: ";
 	$MESS["CATALOG_ELEMENT_BACK"] = "Вернуться в раздел";
-	$MESS["CATALOG_ELEMENT_OVERVIEW"] = "Обзор товара";
+	$MESS["CATALOG_ELEMENT_OVERVIEW"] = "Обзор";
 	$MESS["CATALOG_ELEMENT_SET"] = "Набор";
 	$MESS["CATALOG_ELEMENT_REVIEW"] = "Отзывы";
 	$MESS["CATALOG_ELEMENT_ACCEESSORIES"] = "Аксессуары";
-	$MESS["CATALOG_ELEMENT_SIMILAR"] = "Похожие товары";
+	$MESS["CATALOG_ELEMENT_SIMILAR"] = "Похожие";
 	$MESS["CATALOG_ELEMENT_AVAILABILITY"] = "Наличие"; 
 	$MESS["CATALOG_ELEMENT_DESCRIPTION"] = "Описание";
 	$MESS["CATALOG_ELEMENT_CHARACTERISTICS"] = "Характеристики";
@@ -23,12 +23,12 @@
 	$MESS["CATALOG_ELEMENT_FILES"] = "Файлы";
 	$MESS["CATALOG_ELEMENT_CHARACTERISTICS_SHORT"] = "Характеристики: ";
 	$MESS["CATALOG_ELEMENT_MORE_PROPERTIES"] = "Все характеристики";
-	$MESS["CATALOG_ELEMENT_PREVIEW_TEXT_LABEL"] = "Описание товара: ";
-	$MESS["CATALOG_ELEMENT_DETAIL_TEXT_HEADING"] = "Описание товара";
-	$MESS["SKU_VARIANT_LABEL"] = "Другие варианты товара: ";
+	$MESS["CATALOG_ELEMENT_PREVIEW_TEXT_LABEL"] = "Описание: ";
+	$MESS["CATALOG_ELEMENT_DETAIL_TEXT_HEADING"] = "Описание";
+	$MESS["SKU_VARIANT_LABEL"] = "Другие варианты: ";
 
 	$MESS["SPECS"] = "Характеристики:";
-	$MESS["OTHERITEMS"] = "Другие товары";
+	$MESS["OTHERITEMS"] = "Другие";
 	$MESS["CHARACTERISTICS"] = "Прочие";
 
 	$MESS["READ_MORE"] = "Читать полностью";
@@ -47,13 +47,13 @@
 	$MESS["SENDFEEDBACK"] = "Отправить отзыв";
 	$MESS["REVIEW"] = "Отзывы";
 	$MESS["REVIEW_OK"] = "Ваш отзыв был опубликован на сайте или проходит модерацию.";
-	$MESS["REVIEW_BAD"] = "Извините, вы не можете оставлять больше одного отзыва к товару.";
+	$MESS["REVIEW_BAD"] = "Извините, вы не можете оставлять больше одного отзыва.";
 	$MESS["ERROR"] = "Ошибка";
 	$MESS["CLOSE"] = "Закрыть окно";
 	$MESS["ZOOM"] = "Увеличить";
 	$MESS["PRICE"] = "Цена:";
 	$MESS["RATING"] = "Рейтинг:";
-	$MESS["RATING_PRODUCT"] = "Рейтинг товара:";
+	$MESS["RATING_PRODUCT"] = "Рейтинг:";
 	$MESS["REVIEWS_COUNT"] = "Отзывов: ";
 	$MESS["REVIEWS_HIDE"] = "Скрыть отзывы";
 	$MESS["REVIEWS_SHOW"] = "Показать все отзывы";

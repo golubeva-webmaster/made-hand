@@ -3,7 +3,7 @@ $this->setFrameMode(true);
 ?>
 <?if(!empty($arResult["ITEMS"])):?>
 	<div class="sideBlock" id="collectionBlock">
-		<a class="heading" href="<?=SITE_DIR?>collection/"><?=$arResult["NAME"]?></a>
+		<a class="heading" href="<?=SITE_DIR?>new/"><?=($arParams["BLOCK_TITLE"]) ? $arParams["BLOCK_TITLE"] : $arResult["NAME"]?></a>
 		<div class="sideBlockContent">
 			<?foreach($arResult["ITEMS"] as $ix => $arItem):?>
 				<?

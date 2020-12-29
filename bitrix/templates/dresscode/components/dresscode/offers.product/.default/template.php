@@ -44,11 +44,12 @@
 					<?if(empty($arParams["AJAX"])):?>
 						<div class="ajaxContainer">
 					<?endif;?>
+                <?//='templ: '.$arParams["CATALOG_ITEM_TEMPLATE"]?>
 						<div class="items productList">
 							<?foreach ($arItemsGroup["ITEMS"] as $index => $arElement):?>
 								<?$APPLICATION->IncludeComponent(
-									"dresscode:catalog.item", 
-									$arParams["CATALOG_ITEM_TEMPLATE"], 
+									"dresscode:catalog.item", "mari_default",
+									//$arParams["CATALOG_ITEM_TEMPLATE"],
 									array(
 										"CACHE_TIME" => $arParams["CACHE_TIME"],
 										"CACHE_TYPE" => $arParams["CACHE_TYPE"],

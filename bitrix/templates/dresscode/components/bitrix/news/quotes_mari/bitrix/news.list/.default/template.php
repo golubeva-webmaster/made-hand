@@ -31,11 +31,11 @@ while($ob = $res->GetNextElement())
 
 						if($arElement['DETAIL_PICTURE']['ID']){
 							echo $arElement['DETAIL_PICTURE']['ID'];
-							$st = 'background-repeat: no-repeat; background-size: cover; width: '.$arElement['DETAIL_PICTURE']["WIDTH"].'px; height: '.$arElement['DETAIL_PICTURE']["HEIGHT"].'px; margin: 0 auto; background-image: url('.$arElement['DETAIL_PICTURE']["SRC"].')';
+							$st = 'background-repeat: no-repeat; background-size: cover; max-width: '.$arElement['DETAIL_PICTURE']["WIDTH"].'px; height: '.$arElement['DETAIL_PICTURE']["HEIGHT"].'px; margin: 0 auto; background-image: url('.$arElement['DETAIL_PICTURE']["SRC"].')';
 							$class = 'quote_body';
 						}
 						else{
-							$st = ''; 
+							$st = 'font-color:red';
 							$class = '';
 						}
 
