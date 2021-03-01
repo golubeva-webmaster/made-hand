@@ -30,6 +30,10 @@ Disallow: */rss
 Disallow: /info/more/*
 Disallow: /timeman/*
 Disallow: /api/*
+Disallow: /vendor/*
+Disallow: /sliders/*
+Disallow: /slider/*
+Disallow: /service/*
 
 Allow: /upload/*
 
@@ -37,7 +41,6 @@ Sitemap: https://www.made-hand.ru/sitemap.xml
 Host: https://www.made-hand.ru
 
 User-Agent: Googlebot
-Disallow: /*admin
 Disallow: /*bitrix
 Allow: /bitrix/*css
 Allow: /bitrix/*js

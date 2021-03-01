@@ -7,9 +7,9 @@ $APPLICATION->SetTitle("Страница не найдена");
 ?>
 <div id="error404">
 	<div class="wrapper">
-		<a href="<?=SITE_DIR?>" class="errorPic"><img src="<?=SITE_TEMPLATE_PATH?>/images/404.jpg"></a>
 		<h1>Такой страницы не существует</h1>
-		<div class="errorText">начните поиск с <a href="<?=SITE_DIR?>">главной страницы</a> или выберите нужный товар в <a href="<?=SITE_DIR?>catalog/">каталоге</a>:</div>
+		<a href="<?=SITE_DIR?>" class="errorPic"><img src="/upload/iblock/ee8/ee8639e3e61033766c015d7c3737e657.png"></a>
+		<div class="errorText">начните поиск с <a href="<?=SITE_DIR?>">главной страницы</a> или выберите нужное описание в <a href="<?=SITE_DIR?>catalog/">каталоге</a>:</div>
 	</div>
 	<div id="empty">
 		<div class="wrapper">

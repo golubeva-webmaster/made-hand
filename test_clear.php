@@ -1,7 +1,123 @@
-<?php
-//https://zixn.ru/bitrix-sposob-ochistki-papki-upload-iblock-ot-nenuzhnyh-fajlov.html
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
 
-// Удалить файлы, не связанные ни с одним ИБ
+<?php
+
 
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
@@ -19,14 +135,12 @@ echo '<br>';
 define("NO_KEEP_STATISTIC", true);
 define("NOT_CHECK_PERMISSIONS", true);
 
-$deleteFiles = 'yes'; //Удалять ли найденые файлы yes/no
-$saveBackup = 'no'; //Создаст бэкап файла yes/no
+$deleteFiles = 'no'; //Удалять ли найденые файлы yes/no
+$saveBackup = 'yes'; //Создаст бэкап файла yes/no
 //Папка для бэкапа
 $patchBackup = $_SERVER['DOCUMENT_ROOT'] . "/upload/zixnru_Backup/";
 //Целевая папка для поиска файлов
-//$rootDirPath = $_SERVER['DOCUMENT_ROOT'] . "/upload/iblock";
-$rootDirPath = $_SERVER['DOCUMENT_ROOT'] . "/upload/medialibrary";
-
+$rootDirPath = $_SERVER['DOCUMENT_ROOT'] . "/upload/iblock";
 //Создание папки для бэкапа
 if (!file_exists($patchBackup)) {
     CheckDirPath($patchBackup);
@@ -34,7 +148,6 @@ if (!file_exists($patchBackup)) {
 
 // Получаем записи из таблицы b_file
 $arFilesCache = array();
-global $DB;
 $result = $DB->Query('SELECT FILE_NAME, SUBDIR FROM b_file WHERE MODULE_ID = "iblock"');
 while ($row = $result->Fetch()) {
     $arFilesCache[$row['FILE_NAME']] = $row['SUBDIR'];
@@ -63,15 +176,12 @@ while (false !== ($subDirName = readdir($hRootDir))) {
         $countFile++;
 
         if (array_key_exists($fileName, $arFilesCache)) { //Файл с диска есть в списке файлов базы - пропуск
-            //echo '<br>'.$filesCount++.') пропуск '.$fileName;
             $filesCount++;
             continue;
         }
         $fullPath = "$subDirPath/$fileName"; // полный путь до файла
-        echo '<br>кандидат: '.$subDirPath/$fileName;
         $backTrue = false; //для создание бэкапа
         if ($deleteFiles === 'yes') {
-            echo '<br>yes<br>';
             if (!file_exists($patchBackup . $subDirName)) {
                 if (CheckDirPath($patchBackup . $subDirName . '/')) { //создал поддиректорию
                     $backTrue = true;
@@ -90,7 +200,6 @@ while (false !== ($subDirName = readdir($hRootDir))) {
                 echo "Удалил: " . $fullPath . '<br>';
             }
         } else {
-            echo '<br>no<br>';
             $filesCount++;
             echo 'Кандидат на удаление - ' . $i . ') ' . $fullPath . '<br>';
         }
